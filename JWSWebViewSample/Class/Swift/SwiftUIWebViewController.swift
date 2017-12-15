@@ -11,4 +11,5 @@ import Foundation
 class SwiftUIWebViewController : UIViewController {
     @IBOutlet weak var SafeAreaContainerView: UIView!
     
+    @IBOutlet weak var webView: UIWebView!
 }
