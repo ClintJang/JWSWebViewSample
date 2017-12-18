@@ -16,8 +16,6 @@
 		BC9FF1FB1FDDFEF6000A2E56 /* ObjectiveCUIWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FF1FA1FDDFEF6000A2E56 /* ObjectiveCUIWebViewViewController.m */; };
 		BC9FF1FF1FDDFF2D000A2E56 /* SwiftWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9FF1FE1FDDFF2D000A2E56 /* SwiftWKWebViewController.swift */; };
 		BC9FF2011FDDFF46000A2E56 /* SwiftUIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9FF2001FDDFF46000A2E56 /* SwiftUIWebViewController.swift */; };
-		BC9FF2031FDDFF5D000A2E56 /* SwiftWebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9FF2021FDDFF5D000A2E56 /* SwiftWebView.storyboard */; };
-		BCE138CA1FE3CA0D006E7CE0 /* ObjectiveCWebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE138C91FE3CA0D006E7CE0 /* ObjectiveCWebView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +33,6 @@
 		BC9FF1FA1FDDFEF6000A2E56 /* ObjectiveCUIWebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCUIWebViewViewController.m; sourceTree = "<group>"; };
 		BC9FF1FE1FDDFF2D000A2E56 /* SwiftWKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWKWebViewController.swift; sourceTree = "<group>"; };
 		BC9FF2001FDDFF46000A2E56 /* SwiftUIWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWebViewController.swift; sourceTree = "<group>"; };
-		BC9FF2021FDDFF5D000A2E56 /* SwiftWebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SwiftWebView.storyboard; sourceTree = "<group>"; };
-		BCE138C91FE3CA0D006E7CE0 /* ObjectiveCWebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ObjectiveCWebView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +93,6 @@
 				BC9FF1F71FDDFEC3000A2E56 /* ObjectiveCWKWebViewViewController.m */,
 				BC9FF1F91FDDFEF6000A2E56 /* ObjectiveCUIWebViewViewController.h */,
 				BC9FF1FA1FDDFEF6000A2E56 /* ObjectiveCUIWebViewViewController.m */,
-				BCE138C91FE3CA0D006E7CE0 /* ObjectiveCWebView.storyboard */,
 			);
 			path = "Objective-C";
 			sourceTree = "<group>";
@@ -107,7 +102,6 @@
 			children = (
 				BC9FF1FE1FDDFF2D000A2E56 /* SwiftWKWebViewController.swift */,
 				BC9FF2001FDDFF46000A2E56 /* SwiftUIWebViewController.swift */,
-				BC9FF2021FDDFF5D000A2E56 /* SwiftWebView.storyboard */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -174,9 +168,7 @@
 			files = (
 				BC9FF1E51FDDF8FE000A2E56 /* LaunchScreen.storyboard in Resources */,
 				BC9FF1E21FDDF8FE000A2E56 /* Assets.xcassets in Resources */,
-				BC9FF2031FDDFF5D000A2E56 /* SwiftWebView.storyboard in Resources */,
 				BC9FF1E01FDDF8FE000A2E56 /* Main.storyboard in Resources */,
-				BCE138CA1FE3CA0D006E7CE0 /* ObjectiveCWebView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

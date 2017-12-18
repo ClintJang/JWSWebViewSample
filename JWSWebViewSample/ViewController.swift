@@ -25,25 +25,10 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController {
-    // MARK:- Objective-C
-    @IBAction func showUIWebViewObjectiveC(_ sender: Any) {
-        print("aaa")
-    }
-    
-    @IBAction func showWKWebViewObjectiveC(_ sender: Any) {
-        print("bbb")
-    }
-}
-
-// MARK:- Swift
-extension ViewController {
-    @IBAction func showUIWebViewSwift(_ sender: Any) {
-        print("ccc")
-    }
-    
-    
-    @IBAction func showWKWebViewSwift(_ sender: Any) {
-        print("ddd")
+extension UIViewController {
+    @IBAction func onClose(_ sender: Any) {
+        self.dismiss(animated: true) {
+            print("close")
+        }
     }
 }
