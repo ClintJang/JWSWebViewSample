@@ -1,5 +1,5 @@
 # JWSWebViewSample
-[![License](http://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://github.com/clintjang/JWSBoltsSwiftSample/blob/master/LICENSE) [![Swift 4](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://swift.org) [![objective-c](https://img.shields.io/badge/objectivec-4.0-orange.svg?style=flat)](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
+[![License](http://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://github.com/clintjang/JWSBoltsSwiftSample/blob/master/LICENSE) [![Swift 4](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://swift.org) [![objective-c](https://img.shields.io/badge/objective_c-1.0-orange.svg?style=flat)](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
 
 ## Requirements
 - Minimum iOS Target : iOS 9.0
@@ -65,3 +65,19 @@
 ## Apple Link
 - WKWebView : https://developer.apple.com/documentation/webkit/wkwebview
 - UIWebView : https://developer.apple.com/documentation/uikit/uiwebview
+
+## Using Swift And Objective-C together
+- Swift
+<table style="width:100%">
+  <tr>
+	<th>Packaging, Defines Module : YES</th> 
+    <th>Import "yourprojectname-Swift.h"</th>
+  </tr>
+  <tr>
+  	<td><img width="440" height="120" src="/Image/use_swift_00.png"></img></td>
+    <td><img width="357" height="60" src="/Image/use_swift_01.gif"></img></td>
+  </tr>
+</table>
+
+- Objective-C, Bridging Header Setting
+<img width="453" height="118" src="/Image/use_swift_01.gif"></img>
