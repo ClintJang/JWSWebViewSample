@@ -11,6 +11,8 @@
 
 - This is the default project swift. You can also test with objective-c by adding an objective-c source inside. Public data was managed by appdelegate.swift.
 
+- It is easy to check the execution result of UIWebView and WKWebView.
+
 
 # Info
 ## Result Image
