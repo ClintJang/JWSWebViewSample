@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  JWSWebViewSample
 //
-//  Created by Jang Wangsu on 2017. 12. 11..
+//  Created by ClintJang on 2017. 12. 11..
 //  Copyright © 2017년 ClintJang. All rights reserved.
 //
 

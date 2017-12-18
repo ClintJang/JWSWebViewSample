@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC86272B1FE758A900A7CF92 /* sample.html in Resources */ = {isa = PBXBuildFile; fileRef = BC86272A1FE758A900A7CF92 /* sample.html */; };
 		BC9FF1DB1FDDF8FE000A2E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9FF1DA1FDDF8FE000A2E56 /* AppDelegate.swift */; };
 		BC9FF1E01FDDF8FE000A2E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9FF1DE1FDDF8FE000A2E56 /* Main.storyboard */; };
 		BC9FF1E21FDDF8FE000A2E56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC9FF1E11FDDF8FE000A2E56 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC86272A1FE758A900A7CF92 /* sample.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample.html; sourceTree = "<group>"; };
 		BC9FF1D71FDDF8FE000A2E56 /* JWSWebViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWSWebViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9FF1DA1FDDF8FE000A2E56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC9FF1DF1FDDF8FE000A2E56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC8627291FE758A900A7CF92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BC86272A1FE758A900A7CF92 /* sample.html */,
+			);
+			name = Resources;
+			path = JWSWebViewSample/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
 		BC9FF1CE1FDDF8FE000A2E56 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				BC9FF1EC1FDDF913000A2E56 /* Class */,
+				BC8627291FE758A900A7CF92 /* Resources */,
 				BC9FF1DA1FDDF8FE000A2E56 /* AppDelegate.swift */,
 				BC9FF1F01FDDFA39000A2E56 /* ViewController.swift */,
 				BC9FF1DE1FDDF8FE000A2E56 /* Main.storyboard */,
@@ -166,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC86272B1FE758A900A7CF92 /* sample.html in Resources */,
 				BC9FF1E51FDDF8FE000A2E56 /* LaunchScreen.storyboard in Resources */,
 				BC9FF1E21FDDF8FE000A2E56 /* Assets.xcassets in Resources */,
 				BC9FF1E01FDDF8FE000A2E56 /* Main.storyboard in Resources */,
