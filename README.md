@@ -93,7 +93,7 @@
     <th>iPhone X Sample View2</th>
   </tr>
   <tr>
-  	<td><img width="268" height="480" src="/Image/iPhoneX_safe_area_00.png"></img></td>
-    <td><img width="268" height="480" src="/Image/iPhoneX_safe_area_01.gif"></img></td>
+  	<td><img width="317" height="665" src="/Image/iPhoneX_safe_area_01.png"></img></td>
+    <td><img width="317" height="665" src="/Image/iPhoneX_safe_area_00.png"></img></td>
   </tr>
 </table>
