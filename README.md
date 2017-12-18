@@ -85,6 +85,7 @@
 <img width="453" height="118" src="/Image/use_objectivec.png"></img>
 
 ## Safe Area
+- Also available on iPhone X
 - https://developer.apple.com/documentation/uikit/uiview/positioning_content_relative_to_the_safe_area
 
 <table style="width:100%">
