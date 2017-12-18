@@ -53,7 +53,8 @@ extension SwiftUIWebViewController {
 extension SwiftUIWebViewController: UIWebViewDelegate {
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         print("\(#function)")
-        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+
         return true
     }
     
@@ -63,9 +64,13 @@ extension SwiftUIWebViewController: UIWebViewDelegate {
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
         print("\(#function)")
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+
     }
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         print("\(#function)")
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+
     }
 }

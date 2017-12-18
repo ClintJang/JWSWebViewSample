@@ -29,6 +29,7 @@ extension UIViewController {
     @IBAction func onClose(_ sender: Any) {
         self.dismiss(animated: true) {
             print("self's controller close")
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
     }
 }

@@ -31,6 +31,8 @@ class SwiftWKWebViewController : UIViewController {
 extension SwiftWKWebViewController {
     func initLayout() {
         self.webView = WKWebView(frame:self.safeAreaContainerView.bounds)
+        self.webView.navigationDelegate = self
+        self.webView.uiDelegate = self
         self.webView.translatesAutoresizingMaskIntoConstraints = false
         self.safeAreaContainerView.addSubview(self.webView)
         
@@ -59,5 +61,96 @@ extension SwiftWKWebViewController {
             let request = URLRequest(url: url)
             self.webView.load(request)
         }
+    }
+}
+
+// MARK: - WKUIDelegate
+extension SwiftWKWebViewController : WKUIDelegate {
+    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
+        
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            completionHandler()
+        }))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
+        
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            completionHandler(true)
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action) in
+            completionHandler(false)
+        }))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+        
+        let alertController = UIAlertController(title: nil, message: prompt, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alertController.addTextField { (textField) in
+            textField.text = defaultText
+        }
+        
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            if let text = alertController.textFields?.first?.text {
+                completionHandler(text)
+            } else {
+                completionHandler(defaultText)
+            }
+            
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action) in
+            
+            completionHandler(nil)
+        }))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+}
+
+// MARK: - WKNavigationDelegate
+extension SwiftWKWebViewController : WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error)
+    {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!)
+    {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!)
+    {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error)
+    {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+
+        
+        decisionHandler(.allow)
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        
+        decisionHandler(.allow)
     }
 }
