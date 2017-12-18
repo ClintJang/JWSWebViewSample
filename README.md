@@ -1,6 +1,10 @@
 # JWSWebViewSample
 [![License](http://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://github.com/clintjang/JWSBoltsSwiftSample/blob/master/LICENSE) [![Swift 4](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://swift.org) [![objective-c](https://img.shields.io/badge/objectivec-4.0-orange.svg?style=flat)](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
 
+## Requirements
+- Minimum iOS Target : iOS 9.0
+- Minimum Xcode Version : Xcode 9.0
+- This Sample Project : Xcode 9.2
 
 ## Description
 - This is the WebView Sample source. Both UIWebView and WKWebView can be checked together.You can also check the Swift source and Objective-C source.
