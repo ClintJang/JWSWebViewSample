@@ -18,9 +18,9 @@
     <th>swift</th> 
   </tr>
   <tr>
-  	<td><img width="325" height="667" src="/Image/structure_00.png"></img></td>
-    <td><img width="325" height="667" src="/Image/objectivec_gif_00.gif"></img></td>
-    <td><img width="325" height="667" src="/Image/swift_gif_00.gif"></img></td> 
+  	<td><img width="268" height="480" src="/Image/structure_00.png"></img></td>
+    <td><img width="268" height="480" src="/Image/objectivec_gif_00.gif"></img></td>
+    <td><img width="268" height="480" src="/Image/swift_gif_00.gif"></img></td> 
   </tr>
 </table>
 
