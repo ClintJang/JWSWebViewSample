@@ -75,9 +75,9 @@
   </tr>
   <tr>
   	<td><img width="440" height="120" src="/Image/use_swift_00.png"></img></td>
-    <td><img width="357" height="60" src="/Image/use_swift_01.gif"></img></td>
+    <td><img width="357" height="60" src="/Image/use_swift_01.png"></img></td>
   </tr>
 </table>
 
 - Objective-C, Bridging Header Setting
-<img width="453" height="118" src="/Image/use_swift_01.gif"></img>
+<img width="453" height="118" src="/Image/use_swift_01.png"></img>
