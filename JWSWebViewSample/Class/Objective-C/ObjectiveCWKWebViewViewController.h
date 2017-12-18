@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ @brief The "WKWebView" test screen controller class implemented in the language "ObjectiveC".
+ @class ObjectiveCWKWebViewViewController
+ */
 @interface ObjectiveCWKWebViewViewController : UIViewController
-
 @end

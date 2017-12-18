@@ -119,12 +119,35 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNe-3b-LUJ">
+                                        <rect key="frame" x="67" y="362" width="298" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="qz6-WZ-nFZ"/>
+                                        </constraints>
+                                        <string key="text">ON : URL
+OFF : embedded sample html file </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6ZQ-Bm-1mP">
+                                        <rect key="frame" x="10" y="364" width="49" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="47" id="DHz-C0-tE7"/>
+                                            <constraint firstAttribute="height" constant="31" id="fNa-XB-jK8"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="changedValueURLSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="VSf-Iy-wRB"/>
+                                        </connections>
+                                    </switch>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.90980392160000001" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="SNe-3b-LUJ" firstAttribute="leading" secondItem="6ZQ-Bm-1mP" secondAttribute="trailing" constant="10" id="0Vs-7h-0n0"/>
                                     <constraint firstAttribute="trailing" secondItem="hgk-W9-kTK" secondAttribute="trailing" constant="8" id="5o2-Tm-BOW"/>
                                     <constraint firstItem="8w6-zC-dR0" firstAttribute="leading" secondItem="cpQ-4N-FJv" secondAttribute="leading" constant="8" id="6bV-Df-sRG"/>
                                     <constraint firstAttribute="trailing" secondItem="aDa-7Z-zxJ" secondAttribute="trailing" constant="10" id="8Se-wf-3KM"/>
+                                    <constraint firstItem="SNe-3b-LUJ" firstAttribute="top" secondItem="hgk-W9-kTK" secondAttribute="bottom" constant="10" id="KCS-ye-9e5"/>
                                     <constraint firstAttribute="trailing" secondItem="TIG-ye-kvQ" secondAttribute="trailing" constant="8" id="Mr6-Se-iE7"/>
                                     <constraint firstAttribute="trailing" secondItem="8w6-zC-dR0" secondAttribute="trailing" constant="8" id="Mwq-fK-67Y"/>
                                     <constraint firstItem="3Za-qW-1Xi" firstAttribute="leading" secondItem="cpQ-4N-FJv" secondAttribute="leading" constant="8" id="UZc-CY-ydh"/>
@@ -132,6 +155,9 @@
                                     <constraint firstItem="TIG-ye-kvQ" firstAttribute="leading" secondItem="cpQ-4N-FJv" secondAttribute="leading" constant="8" id="ajE-DR-YDX"/>
                                     <constraint firstItem="aDa-7Z-zxJ" firstAttribute="leading" secondItem="cpQ-4N-FJv" secondAttribute="leading" constant="10" id="aop-TY-CbD"/>
                                     <constraint firstAttribute="bottom" secondItem="aDa-7Z-zxJ" secondAttribute="bottom" constant="20" id="dIN-3N-c2Q"/>
+                                    <constraint firstItem="6ZQ-Bm-1mP" firstAttribute="leading" secondItem="cpQ-4N-FJv" secondAttribute="leading" constant="10" id="fmb-cC-uZC"/>
+                                    <constraint firstItem="6ZQ-Bm-1mP" firstAttribute="top" secondItem="hgk-W9-kTK" secondAttribute="bottom" constant="12" id="gp3-cQ-HnA"/>
+                                    <constraint firstAttribute="trailing" secondItem="SNe-3b-LUJ" secondAttribute="trailing" constant="10" id="hWL-9H-bjb"/>
                                     <constraint firstItem="TIG-ye-kvQ" firstAttribute="top" secondItem="3Za-qW-1Xi" secondAttribute="bottom" constant="8" id="hje-1j-GjY"/>
                                     <constraint firstItem="hgk-W9-kTK" firstAttribute="top" secondItem="TIG-ye-kvQ" secondAttribute="bottom" constant="8" id="qRd-Pi-ozf"/>
                                     <constraint firstItem="8w6-zC-dR0" firstAttribute="top" secondItem="cpQ-4N-FJv" secondAttribute="top" constant="8" id="rip-zH-6ga"/>
@@ -166,7 +192,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="597"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIn-gE-lbA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIn-gE-lbA">
                                 <rect key="frame" x="10" y="617" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="ZLM-Mm-4Ph"/>
@@ -202,7 +228,7 @@
                         <viewLayoutGuide key="safeArea" id="ah4-UU-7nb"/>
                     </view>
                     <connections>
-                        <outlet property="SafeAreaContainerView" destination="u42-5z-YpI" id="UpB-4g-w6m"/>
+                        <outlet property="safeAreaContainerView" destination="u42-5z-YpI" id="zke-FV-vBV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nc-zY-bFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -223,6 +249,9 @@
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdX-z0-bem">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="uTd-oJ-YBs" id="Oh1-mN-IM3"/>
+                                        </connections>
                                     </webView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -233,7 +262,7 @@
                                     <constraint firstItem="zdX-z0-bem" firstAttribute="top" secondItem="q6b-Aj-Xpi" secondAttribute="top" id="qh5-TQ-Z5n"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBO-sB-IE2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBO-sB-IE2">
                                 <rect key="frame" x="10" y="617" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="MNh-gG-0L8"/>
@@ -269,7 +298,7 @@
                         <viewLayoutGuide key="safeArea" id="XV1-In-EHx"/>
                     </view>
                     <connections>
-                        <outlet property="SafeAreaContainerView" destination="q6b-Aj-Xpi" id="LJw-Nl-qyj"/>
+                        <outlet property="safeAreaContainerView" destination="q6b-Aj-Xpi" id="f5T-1q-Lyt"/>
                         <outlet property="webView" destination="zdX-z0-bem" id="4rZ-MP-Q4x"/>
                     </connections>
                 </viewController>
@@ -325,7 +354,7 @@
                         <viewLayoutGuide key="safeArea" id="Y3l-Xz-Waw"/>
                     </view>
                     <connections>
-                        <outlet property="SafeAreaContainerView" destination="oZZ-6r-0cC" id="aUY-kX-GBD"/>
+                        <outlet property="safeAreaContainerView" destination="oZZ-6r-0cC" id="2dp-dQ-pcz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btx-BR-OU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -342,7 +371,19 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQF-iC-bGX">
                                 <rect key="frame" x="0.0" y="20" width="375" height="597"/>
+                                <subviews>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dma-HM-dtH">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </webView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Dma-HM-dtH" secondAttribute="bottom" id="JQO-o7-xbm"/>
+                                    <constraint firstItem="Dma-HM-dtH" firstAttribute="top" secondItem="bQF-iC-bGX" secondAttribute="top" id="Yhu-Dd-3WI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dma-HM-dtH" secondAttribute="trailing" id="kJi-hV-qMP"/>
+                                    <constraint firstItem="Dma-HM-dtH" firstAttribute="leading" secondItem="bQF-iC-bGX" secondAttribute="leading" id="vaN-KV-o4l"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objective-C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoE-G7-p2e">
                                 <rect key="frame" x="10" y="617" width="120" height="40"/>
@@ -380,12 +421,13 @@
                         <viewLayoutGuide key="safeArea" id="ith-C6-dUa"/>
                     </view>
                     <connections>
-                        <outlet property="SafeAreaContainerView" destination="bQF-iC-bGX" id="pxJ-Sn-wbx"/>
+                        <outlet property="safeAreaContainerView" destination="bQF-iC-bGX" id="DXr-ik-V4M"/>
+                        <outlet property="webView" destination="Dma-HM-dtH" id="aEh-mI-sBn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzo-uT-oGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-559" y="-546"/>
+            <point key="canvasLocation" x="-559.20000000000005" y="-546.47676161919048"/>
         </scene>
     </scenes>
 </document>

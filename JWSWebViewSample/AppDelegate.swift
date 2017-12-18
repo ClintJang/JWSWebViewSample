@@ -8,12 +8,24 @@
 
 import UIKit
 
+let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+@objc class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    // Change your test URL here.
+    private let urlString = "http://www.github.com"
 
-
+    // For convenience, I created it in "appdelegate". This is whether or not "URL" is selected.
+    @objc var isURL:Bool = false
+    
+    @objc var url:URL? {
+        return URL(string: urlString)
+    }
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

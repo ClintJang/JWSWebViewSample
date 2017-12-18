@@ -7,22 +7,69 @@
 //
 
 #import "ObjectiveCUIWebViewViewController.h"
+#import "JWSWebViewSample-Swift.h"
 
 @interface ObjectiveCUIWebViewViewController ()
-@property (weak, nonatomic) IBOutlet UIView *SafeAreaContainerView;
+@property (weak, nonatomic) IBOutlet UIView *safeAreaContainerView;     // It contains "View" that reflects "Self Area" function.
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@end
 
+@interface ObjectiveCUIWebViewViewController (webview) <UIWebViewDelegate>
 @end
 
 @implementation ObjectiveCUIWebViewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // initializes
+    [self initLayout];
+    
+    [self loadURL];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - init
+/**
+ @brief This function initializes the layout.
+ */
+- (void)initLayout {
+    // I set it(webView) in "storyboard".
 }
 
+/**
+ @brief The function that loads the URL.
+ */
+- (void)loadURL {
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if ([delegate isURL] == YES) {
+        NSURL *url = [delegate url];
+        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+        [self.webView loadRequest:request];
+    } else {
+        NSURL *url = [[NSBundle mainBundle] URLForResource:@"sample" withExtension:@"html"];
+        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+        [self.webView loadRequest:request];
+    }
+}
+@end
+
+#pragma mark - UIWebViewDelegate
+@implementation ObjectiveCUIWebViewViewController (webview)
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    NSLog(@"%s", __FUNCTION__);
+    return YES;
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    NSLog(@"%s", __FUNCTION__);
+
+}
 @end

@@ -14,17 +14,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension UIViewController {
+    @IBAction func changedValueURLSwitch(_ sender: UISwitch) {
+        appDelegate.isURL = sender.isOn
     }
 }
 
 extension UIViewController {
+    /// common close function
     @IBAction func onClose(_ sender: Any) {
         self.dismiss(animated: true) {
-            print("close")
+            print("self's controller close")
         }
     }
 }
