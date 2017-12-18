@@ -57,6 +57,8 @@
 @implementation ObjectiveCUIWebViewViewController (webview)
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSLog(@"%s", __FUNCTION__);
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+
     return YES;
 }
 
@@ -66,10 +68,13 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     NSLog(@"%s", __FUNCTION__);
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     NSLog(@"%s", __FUNCTION__);
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 
 }
 @end

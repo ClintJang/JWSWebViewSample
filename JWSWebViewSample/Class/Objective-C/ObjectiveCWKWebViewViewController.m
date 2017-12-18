@@ -8,7 +8,6 @@
 
 #import "ObjectiveCWKWebViewViewController.h"
 #import "JWSWebViewSample-Swift.h"
-//#import ""
 
 @import WebKit;
 
@@ -128,17 +127,23 @@
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(null_unspecified WKNavigation *)navigation
 {
     NSLog(@"%s", __FUNCTION__);
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+
 
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation
 {
     NSLog(@"%s", __FUNCTION__);
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error
 {
     NSLog(@"%s", __FUNCTION__);
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
