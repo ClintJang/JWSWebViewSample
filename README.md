@@ -5,6 +5,7 @@
 - Minimum iOS Target : iOS 9.0
 - Minimum Xcode Version : Xcode 9.0
 - This Sample Project : Xcode 9.2
+(Because of "Self Area")
 
 ## Description
 - This is the WebView Sample source. Both UIWebView and WKWebView can be checked together.You can also check the Swift source and Objective-C source.
@@ -82,3 +83,17 @@
 - Objective-C, Bridging Header Setting
 
 <img width="453" height="118" src="/Image/use_objectivec.png"></img>
+
+## Safe Area
+- https://developer.apple.com/documentation/uikit/uiview/positioning_content_relative_to_the_safe_area
+
+<table style="width:100%">
+  <tr>
+	<th>iPhone X Sample View1</th> 
+    <th>iPhone X Sample View2</th>
+  </tr>
+  <tr>
+  	<td><img width="268" height="480" src="/Image/iPhoneX_safe_area_00.png"></img></td>
+    <td><img width="268" height="480" src="/Image/iPhoneX_safe_area_01.gif"></img></td>
+  </tr>
+</table>
