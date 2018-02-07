@@ -1,8 +1,9 @@
 # JWSWebViewSample
 [![License](http://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://github.com/clintjang/JWSBoltsSwiftSample/blob/master/LICENSE) [![Swift 4](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://swift.org) [![objective-c](https://img.shields.io/badge/objective_c-1.0-orange.svg?style=flat)](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
 
-Link: [What's the difference between UIWebView and WKWebView?](
-https://www.hackingwithswift.com/example-code/wkwebview/whats-the-difference-between-uiwebview-and-wkwebview)
+Link 1: [What's the difference between UIWebView and WKWebView?](https://www.hackingwithswift.com/example-code/wkwebview/whats-the-difference-between-uiwebview-and-wkwebview)
+Link 2-En: [WKWebView: Differences from UIWebView browsing engine](http://docs.kioskproapp.com/article/840-wkwebview-supported-features-known-issues#requires-ios9)
+Link 2-Ko: [UIWebView와 WKWebView의 차이](http://zeddios.tistory.com/332)
 
 ## Requirements
 - Minimum iOS Target : iOS 9.0
