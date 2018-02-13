@@ -95,8 +95,8 @@
 
 <table style="width:100%">
   <tr>
-	<th>iPhone X Sample View1</th> 
-    <th>iPhone X Sample View2</th>
+	<th>iPhone X Sample View 1</th> 
+    <th>iPhone X Sample View 2</th>
   </tr>
   <tr>
   	<td><img width="317" height="665" src="/Image/iPhoneX_safe_area_01.png"></img></td>
