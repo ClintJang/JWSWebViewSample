@@ -42,8 +42,8 @@
 
 ## Source
 - AppDelegate.swift
-<pre><code>
 
+```swift
 ... 
     // Change your test URL here.
     private let urlString = "http://www.github.com"
@@ -55,8 +55,7 @@
         return URL(string: urlString)
     }
 ...
-
-</code></pre>
+```
 
 - swift 
 	- WKWebView : SwiftWKWebViewController.swift
