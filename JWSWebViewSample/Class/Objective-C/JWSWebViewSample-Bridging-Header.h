@@ -5,7 +5,6 @@
 #ifndef JWSWebViewSample-Bridging-Header_h
 #define JWSWebViewSample-Bridging-Header_h
 
-
 // WebView
 #import "ObjectiveCWKWebViewViewController.h"
 #import "ObjectiveCUIWebViewViewController.h"

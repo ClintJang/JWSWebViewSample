@@ -8,6 +8,7 @@
 
 import UIKit
 
+// This is only for development convenience. :)
 let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
 @UIApplicationMain

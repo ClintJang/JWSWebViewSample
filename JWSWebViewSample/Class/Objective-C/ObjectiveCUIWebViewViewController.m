@@ -12,6 +12,9 @@
 @interface ObjectiveCUIWebViewViewController ()
 @property (weak, nonatomic) IBOutlet UIView *safeAreaContainerView;     // It contains "View" that reflects "Self Area" function.
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+    
+- (void)setupView;
+- (void)loadURL;
 @end
 
 @interface ObjectiveCUIWebViewViewController (webview) <UIWebViewDelegate>
@@ -23,7 +26,7 @@
     [super viewDidLoad];
     
     // initializes
-    [self initLayout];
+    [self setupView];
     
     [self loadURL];
 }
@@ -32,7 +35,7 @@
 /**
  @brief This function initializes the layout.
  */
-- (void)initLayout {
+- (void)setupView {
     // I set it(webView) in "storyboard".
 }
 

@@ -14,6 +14,9 @@
 @interface ObjectiveCWKWebViewViewController ()
 @property (weak, nonatomic) IBOutlet UIView *safeAreaContainerView;     // It contains "View" that reflects "Self Area" function.
 @property (strong, nonatomic) WKWebView *webView;
+    
+- (void)setupView;
+- (void)loadURL;
 @end
 
 @interface ObjectiveCWKWebViewViewController (webkit) <WKUIDelegate, WKNavigationDelegate>
@@ -25,7 +28,7 @@
     [super viewDidLoad];
     
     // initializes
-    [self initLayout];
+    [self setupView];
     
     [self loadURL];
 }
@@ -33,7 +36,7 @@
 /**
  @brief This function initializes the layout.
  */
-- (void)initLayout {
+- (void)setupView {
     CGRect rect = CGRectMake(0.0, 0.0, self.safeAreaContainerView.frame.size.width, self.safeAreaContainerView.frame.size.height);
     self.webView = [[WKWebView alloc] initWithFrame:rect];
     self.webView.UIDelegate = self;

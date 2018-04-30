@@ -12,7 +12,7 @@ import Foundation
  The "UIWebView" test screen controller class implemented in the language "swift".
  - class : SwiftUIWebViewController
  */
-class SwiftUIWebViewController : UIViewController {
+final class SwiftUIWebViewController : UIViewController {
     @IBOutlet weak var safeAreaContainerView: UIView!
     @IBOutlet weak var webView: UIWebView!
     
@@ -20,16 +20,17 @@ class SwiftUIWebViewController : UIViewController {
         super.viewDidLoad()
         
         // initializes
-        initLayout()
+        setupView()
         
         loadURL()
     }
 }
 
-// MARK:- init
-extension SwiftUIWebViewController {
-    func initLayout() {
+// MARK:- Private
+private extension SwiftUIWebViewController {
+    func setupView() {
         // I set it(webView) in "storyboard".
+        
     }
     
     func loadURL() {
@@ -71,6 +72,5 @@ extension SwiftUIWebViewController: UIWebViewDelegate {
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         print("\(#function)")
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-
     }
 }

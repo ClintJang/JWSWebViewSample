@@ -1,0 +1,5 @@
+# # Unnecessary files in xcodeproj
+*.xcuserstate
+*.xcbkptlist
+xcschememanagement.plist
+contents.xcworkspacedata

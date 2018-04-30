@@ -13,7 +13,7 @@ import WebKit
  The "WKWebView" test screen controller class implemented in the language "swift".
  - class : SwiftWKWebViewController
  */
-class SwiftWKWebViewController : UIViewController {
+final class SwiftWKWebViewController : UIViewController {
     @IBOutlet weak var safeAreaContainerView: UIView!
     private var webView: WKWebView!
     
@@ -21,15 +21,15 @@ class SwiftWKWebViewController : UIViewController {
         super.viewDidLoad()
         
         // initializes
-        initLayout()
+        setupView()
         
         loadURL()
     }
 }
 
-// MARK:- init
-extension SwiftWKWebViewController {
-    func initLayout() {
+// MARK:- Private
+private extension SwiftWKWebViewController {
+    func setupView() {
         self.webView = WKWebView(frame:self.safeAreaContainerView.bounds)
         self.webView.navigationDelegate = self
         self.webView.uiDelegate = self
@@ -67,6 +67,7 @@ extension SwiftWKWebViewController {
 // MARK: - WKUIDelegate
 extension SwiftWKWebViewController : WKUIDelegate {
     func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
+        print("\(#function)")
         
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
         
@@ -78,6 +79,7 @@ extension SwiftWKWebViewController : WKUIDelegate {
     }
     
     func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
+        print("\(#function)")
         
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
         
@@ -93,6 +95,7 @@ extension SwiftWKWebViewController : WKUIDelegate {
     }
     
     func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+        print("\(#function)")
         
         let alertController = UIAlertController(title: nil, message: prompt, preferredStyle: UIAlertControllerStyle.alert)
         
@@ -122,35 +125,36 @@ extension SwiftWKWebViewController : WKUIDelegate {
 extension SwiftWKWebViewController : WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error)
     {
+        print("\(#function)")
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!)
     {
+        print("\(#function)")
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!)
     {
+        print("\(#function)")
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error)
     {
+        print("\(#function)")
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-
+        print("\(#function)")
         
         decisionHandler(.allow)
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
-        
+        print("\(#function)")
         decisionHandler(.allow)
     }
 }
